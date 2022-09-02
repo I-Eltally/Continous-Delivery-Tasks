@@ -37,6 +37,7 @@ jobs:
           name: Run Playbook and Configure server
           command: |
             # Your command
+            export ANSIBLE_PARAMIKO_HOST_KEY_AUTO_ADD=True
             ansible-playbook -i inventory main.yml
 
 # Invoke jobs via workflows
