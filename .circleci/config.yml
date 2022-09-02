@@ -26,8 +26,8 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-              # You can get this ID in the section where you registered the SSH Key
-              fingerprints: ["cd:f7:d6:15:b5:d0:cf:3f:13:7c:cb:76:25:45:b2:76"] 
+            # You can get this ID in the section where you registered the SSH Key
+            fingerprints: ["cd:f7:d6:15:b5:d0:cf:3f:13:7c:cb:76:25:45:b2:76"] 
       - run:
           name: Install Ansible
           command: |
@@ -37,6 +37,7 @@ jobs:
           name: Run Playbook and Configure server
           command: |
             # Your command
+            RUN  echo "    IdentityFile ~/.ssh/id_rsa" >> /etc/ssh/ssh_config
             ansible-playbook -i inventory main.yml
 
 # Invoke jobs via workflows
