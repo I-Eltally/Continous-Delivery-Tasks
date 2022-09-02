@@ -1,5 +1,5 @@
 [ubuntu]
-3.219.28.160 ansible_ssh_pass=ubuntu ansible_ssh_user=ubuntu
+3.219.28.160
 
 [all]
-3.219.28.160 ansible_ssh_pass=ubuntu ansible_ssh_user=ubuntu
+3.219.28.160
