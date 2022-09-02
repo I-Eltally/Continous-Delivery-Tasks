@@ -44,7 +44,6 @@ jobs:
 
             # Run with 4*v for connection level verbosity
             ansible-playbook -vvvv ...
-            ansible-playbook -i inventory main.yml
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
