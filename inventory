@@ -1,1 +1,2 @@
 [all]
+34.207.112.244 ansible_ssh_pass=ubuntu ansible_ssh_user=ubuntu
