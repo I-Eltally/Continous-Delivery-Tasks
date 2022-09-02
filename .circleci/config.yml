@@ -37,7 +37,6 @@ jobs:
           name: Run Playbook and Configure server
           command: |
             # Your command
-            cp ${HOME}/.ssh/id_circleci_github id_rsa
             ansible-playbook -i inventory main.yml
 
 # Invoke jobs via workflows
