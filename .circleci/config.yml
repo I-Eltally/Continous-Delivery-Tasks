@@ -36,8 +36,8 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-            RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
-            ssh-add -K ~/.ssh/rsa_key
+            RUN echo "PermitRootLogin yes" >> /etc/ssh/ssh_config
+            ssh-add -K ~/.ssh/eltally
             ansible-playbook -i inventory main.yml
 
 # Invoke jobs via workflows
