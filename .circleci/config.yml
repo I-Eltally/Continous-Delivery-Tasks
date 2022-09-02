@@ -36,8 +36,6 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-            eval "$(ssh-agent -s)"
-            Agent pid 59566
             ssh-add -K ~/.ssh/eltally
             ansible-playbook -i inventory main.yml
 
