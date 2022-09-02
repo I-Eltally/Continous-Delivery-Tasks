@@ -37,7 +37,6 @@ jobs:
           name: Run Playbook and Configure server
           command: |
             # Your command
-            RUN  echo "    IdentityFile ~/.ssh/id_rsa" >> /etc/ssh/ssh_config
             ansible-playbook -i inventory main.yml
 
 # Invoke jobs via workflows
