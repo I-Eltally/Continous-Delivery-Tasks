@@ -43,13 +43,13 @@ jobs:
     docker:
       - image: alpine:latest
     steps:
-      - run: apk add --update curl
+      - run: apk add --update telnet
       - run:
           name: smoke test
           command: |
-            URL="https://blog.udacity.com/"
+            URL="ec2-44-204-99-126.compute-1.amazonaws.com"
             # Test if website exists
-            if curl -s --head ${URL} 
+            if telnet ${URL} 22
             then
               return 0
             else
