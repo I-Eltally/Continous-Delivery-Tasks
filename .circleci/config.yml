@@ -48,9 +48,9 @@ jobs:
       - 
         run: 
           command: |-
-              machine="ec2-44-204-99-126.compute-1.amazonaws.com"
-              # Test if machine up and running
-              if telnet ${machine} 22
+              URL="https://blog.udacity.com/"
+              # Test if website exists
+              if curl -s --head ${URL} 
               then
                 return 0
               else
