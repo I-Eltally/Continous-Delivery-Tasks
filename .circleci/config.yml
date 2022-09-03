@@ -40,13 +40,10 @@ jobs:
 
   smoke_test: 
     docker: 
-      - 
-        image: "alpine:latest"
+      - image: "alpine:latest"
     steps: 
-      - 
-        run: "apk add --update telnet"
-      - 
-        run: 
+      - run: "apk add --update telnet"
+      - run: 
           command: |-
               URL="https://blog.udacity.com/"
               # Test if website exists
